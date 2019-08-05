@@ -1,0 +1,21 @@
+## YOUR README GOES HERE ##
+Hin Chan, 913645769
+Charles Adrick Arellano, 913410936
+
+Note:
+
+Parser.java - the error message of a terminal with multiple starting token will use the first definite starting token.
+		Example of definite starting token:
+			ref_id ::= ['~' [number]] id
+
+			!mustbe(ref_id) will show "mustbe: want TOK.ID" becuase it is the first definite starting token.
+
+		Another Example: 
+			statement ::= assignment | print | do | if
+			assignment ::= ref_id '=' expr
+		    	
+			!mustbe(statement) will show "mustbe: want TOK.ID" because assignment -> ref_id -> id.
+
+Results:
+
+We were able to successfully complete all of the test cases. 
